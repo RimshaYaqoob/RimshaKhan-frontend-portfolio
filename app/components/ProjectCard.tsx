@@ -3,8 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const ProjectCard = ({
+  const ProjectCard = ({
   title,
   description,
   role,
@@ -13,7 +12,11 @@ const ProjectCard = ({
   image,
   video,
   DemoLink,
+}: {
+  title: string;
+  [key: string]: any;
 }) => {
+
   const [open, setOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
