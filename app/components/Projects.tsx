@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import Image from 'next/image';
-import video from '../public/videos/RPM.mp4';
+
 
 const Projects = () => {
+
   const projects = [
     {
       slug: 'union-health-solution',
@@ -76,6 +76,7 @@ const Projects = () => {
 }
 
   ];
+  
 
   return (
     <section id="projects" className="pt-20 bg-gray-100">

@@ -3,7 +3,20 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-  const ProjectCard = ({
+
+
+  type ProjectCardProps = {
+  title: string;
+  description?: string;
+  role?: string;
+  figmaLink?: string;
+  githubLink?: string;
+  image?: string;
+  video?: string;
+  DemoLink?: string;
+};
+
+const ProjectCard = ({
   title,
   description,
   role,
@@ -12,13 +25,11 @@ import { motion } from "framer-motion";
   image,
   video,
   DemoLink,
-}: {
-  title: string;
-  [key: string]: any;
-}) => {
+}: ProjectCardProps) => {
 
   const [open, setOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
 
   return (
     <motion.div
