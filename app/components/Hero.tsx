@@ -88,7 +88,7 @@ export default function Hero() {
         >
           <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
             <Image
-              src="/images/pic.png"
+              src="/images/pic.jpg"
               alt="Rimsha Khan"
               width={260}
               height={260}
