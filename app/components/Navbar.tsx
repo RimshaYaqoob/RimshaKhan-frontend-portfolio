@@ -42,6 +42,43 @@ export default function Navbar() {
     }
   };
 
+
+
+
+
+useEffect(() => {
+  const handleScroll = () => setIsScrolled(window.scrollY > 20);
+  window.addEventListener("scroll", handleScroll);
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -70% 0px", 
+    threshold: 0, 
+  };
+
+  const observerCallback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Sabhi sections ko observe karna shuru karein
+  navItems.forEach((item) => {
+    const sectionId = item.href.replace("#", "");
+    const section = document.getElementById(sectionId);
+    if (section) observer.observe(section);
+  });
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    observer.disconnect();
+  };
+}, []);
+
   return (
     <motion.nav
       initial={{ y: -80 }}
