@@ -16,7 +16,7 @@ const Projects = () => {
         'https://drive.google.com/file/d/your-uhs-pdf-link/view',
       githubLink:
         'https://github.com/yourusername/union-health-solution',
-      image: '/images/uhs.png',
+      image: '/images/uhs.jpg',
     },
 
     {
@@ -43,7 +43,7 @@ const Projects = () => {
         'https://www.figma.com/design/6gb3WsQLcOHs0rhCWW4RoE/MaxStats',
       githubLink:
         'https://github.com/MaxRemindPrvt/Max-Stats',
-      image: '/images/stats.png', // stats dashboard image
+      image: '/images/stats.jpg', // stats dashboard image
     },
 
 
@@ -58,7 +58,7 @@ const Projects = () => {
 
   githubLink:
     'https://github.com/RimshaYaqoob/Real-Estate-Application',
-    image: '/images/Real-estate.png',
+    image: '/images/Real-estate.jpg',
 },
 
        {
